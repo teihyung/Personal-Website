@@ -1,10 +1,10 @@
 import React from "react";
+import DescriptionSection from "./components/DescriptionSection";
 
 const Introduction = () => {
   return (
     <>
-      <div>introduction</div>
-      <h1>Welcome</h1>
+      <DescriptionSection />
     </>
   );
 };

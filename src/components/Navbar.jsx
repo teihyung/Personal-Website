@@ -29,8 +29,8 @@ const Nav = styled.nav`
 `;
 
 const Inner = styled.div`
-  max-width: 1200px;
   display: flex;
+  padding: 0 10vh;
   margin: 0 20px;
   justify-content: space-between;
 `;
