@@ -24,6 +24,6 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  padding: 5vh;
+//   padding: 5vh;
   box-sizing: border-box;
 `;
