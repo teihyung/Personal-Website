@@ -21,7 +21,7 @@ export default function Navbar() {
 const Nav = styled.nav`
   position: sticky;
   top: 0;
-  //   background: ${theme.colors.navBg};
+  background: ${theme.colors.bg};
   color: ${theme.colors.text};
   padding: 1rem ${theme.padding};
   font-weight: bold;

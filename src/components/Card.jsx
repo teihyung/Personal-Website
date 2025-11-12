@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../theme";
-import imageSrc from "../assets/react.svg";
 
-const Card = ({ title, position, duration, responsiblity, CardColor }) => {
+const Card = ({ title, position, duration, responsiblity, CardColor, Icon, IconColor }) => {
   return (
     <CardContainer $CardColor={CardColor}>
       <CardHeader>
         <LeftGroup>
-          <ImageContainer src={imageSrc} alt="Company Logo" />
+          {Icon && (
+            <ImageContainer width={"40px"} height={"40px"} $bgColor={IconColor || theme.colors.grey20}>
+              <Icon size={30} color={theme.colors.bg} />
+            </ImageContainer>
+          )}
+
           <TitlePositionContainer>
             <Title>{title}</Title>
             <Position>{position}</Position>
@@ -27,7 +31,7 @@ export default Card;
 const CardContainer = styled.div`
   background-color: ${(props) => props.$CardColor || theme.colors.blue20};
   padding: 20px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 100%;
   max-width: 1200px;
   border: 1px solid ${theme.colors.grey20};
@@ -50,25 +54,29 @@ const LeftGroup = styled.div`
 const TitlePositionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 2px 0px;
 `;
 
-const ImageContainer = styled.img`
-  width: 40px;
-  height: 40px;
-  // margin-right: 10px;
+const ImageContainer = styled.div`
+  width: ${(props) => props.width || "40px"};
+  height: ${(props) => props.height || "40px"};
+  border-radius: 5px;
+  background-color: ${(props) => props.$bgColor || theme.colors.grey20};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-const Title = styled.h3`
+const Title = styled.p`
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   color: ${theme.colors.black};
-  margin-bottom: 5px;
 `;
 
 const Position = styled.p`
   font-size: 13px;
   font-weight: 300;
   color: ${theme.colors.black};
-  margin-bottom: 5px;
+  margin-left: 2px;
 `;
 
 const Duration = styled.p`

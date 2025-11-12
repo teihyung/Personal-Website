@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 import Card from "../../../components/Card";
+import { BiBuilding, BiSolidGraduation } from "react-icons/bi";
 
 const ExperienceSection = () => {
   return (
@@ -19,6 +20,20 @@ const ExperienceSection = () => {
         responsiblity={
           "Developed and maintained user interfaces using React.js, ensuring responsive design and optimal performance across various devices."
         }
+        Icon={BiBuilding}
+        IconColor={theme.colors.blue}
+      />
+
+      <Card
+        title={"Terrazero Technologies"}
+        position={"Frontend Developer"}
+        duration={"Mar 2025 - Sep 2025"}
+        CardColor={theme.colors.blue20}
+        responsiblity={
+          "Developed and maintained user interfaces using React.js, ensuring responsive design and optimal performance across various devices."
+        }
+        Icon={BiSolidGraduation}
+        IconColor={theme.colors.blue}
       />
     </ExperienceContainer>
   );
