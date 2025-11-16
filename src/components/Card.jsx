@@ -2,16 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../theme";
 
-const Card = ({ title, position, duration, responsiblity, CardColor, Icon, IconColor }) => {
+const Card = ({ title, position, duration, responsiblity, CardColor, Icon, IconColor, ImageSrc }) => {
   return (
     <CardContainer $CardColor={CardColor}>
       <CardHeader>
         <LeftGroup>
-          {Icon && (
+          {Icon || ImageSrc ? (
             <ImageContainer width={"40px"} height={"40px"} $bgColor={IconColor || theme.colors.grey20}>
-              <Icon size={30} color={theme.colors.bg} />
+              {typeof Icon === "function" ? (
+                <Icon size={30} color={theme.colors.bg} />
+              ) : ImageSrc ? (
+                <StyledImage src={ImageSrc} alt={title} />
+              ) : null}
             </ImageContainer>
-          )}
+          ) : null}
 
           <TitlePositionContainer>
             <Title>{title}</Title>
@@ -61,11 +65,20 @@ const ImageContainer = styled.div`
   width: ${(props) => props.width || "40px"};
   height: ${(props) => props.height || "40px"};
   border-radius: 5px;
-  background-color: ${(props) => props.$bgColor || theme.colors.grey20};
+  // background-color: ${(props) => props.$bgColor || theme.colors.grey20};
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+
+const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+`;
+
+
 const Title = styled.p`
   font-size: 20px;
   font-weight: 500;
