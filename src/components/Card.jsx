@@ -74,6 +74,8 @@ const ImageContainer = styled.div`
 const StyledImage = styled.img`
   width: 100%;
   height: 100%;
+  min-width: 40px;
+  min-height: 40px;
   object-fit: contain;
   border-radius: 5px;
 `;

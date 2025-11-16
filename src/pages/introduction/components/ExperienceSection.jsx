@@ -6,7 +6,7 @@ import { BiBuilding, BiSolidGraduation } from "react-icons/bi";
 import TerrazeroLogo from "../../../assets/terrazerotech_logo.jpeg";
 import COGLogo from "../../../assets/communityofguardians_logo.jpeg";
 import AgoraArtLogo from "../../../assets/agoraart_logo.jpeg";
-import BCITLogo from "../../../assets/BCIT_logo.png";
+import BCITLogo from "../../../assets/BCIT_logo.jpeg";
 
 const ExperienceSection = () => {
   return (
