@@ -81,7 +81,7 @@ const ExperienceContainer = styled.div`
   padding: 5vh 5vh;
   min-height: 40vh;
   width: 100%;
-  gap: 10px;
+  gap: 40px;
 `;
 
 const Header = styled.div`
