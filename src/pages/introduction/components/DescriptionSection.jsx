@@ -6,34 +6,43 @@ import Button from "../../../components/Button";
 const DescriptionSection = () => {
   return (
     <MainContainer>
-      <WelcomeTextContainer>
-        <p>Welcome to my Page</p>
-      </WelcomeTextContainer>
+      <DescriptionContainer>
+        <WelcomeTextContainer>
+          <p>Welcome to my Page</p>
+        </WelcomeTextContainer>
 
-      <Title>
-        Hello, my name is <span>Chris</span>
-      </Title>
+        <Title>
+          Hello, my name is <span>Chris</span>
+        </Title>
 
-      <SubTitle>Developer with 1 year of experience</SubTitle>
+        <SubTitle>Developer with 1 year of experience</SubTitle>
 
-      <DescriptionText>
-        I'm a passionate developer focused on creating innovative solutions and
-        delivering high-quality code. My journey in software development has
-        equipped me with diverse skills across multiple technologies and
-        frameworks.
-      </DescriptionText>
+        <DescriptionText>
+          I'm a passionate developer focused on creating innovative solutions
+          and delivering high-quality code. My journey in software development
+          has equipped me with diverse skills across multiple technologies and
+          frameworks.
+        </DescriptionText>
 
-      <ButtonContainer>
-        <Button buttonColor={theme.colors.blue} buttonText="Learn More" />
-        <Button buttonColor={theme.colors.grey} buttonText="Contact Me" />
-      </ButtonContainer>
+        <ButtonContainer>
+          <Button buttonColor={theme.colors.blue} buttonText="Learn More" />
+          <Button buttonColor={theme.colors.grey} buttonText="Contact Me" />
+        </ButtonContainer>
+      </DescriptionContainer>
     </MainContainer>
   );
 };
 
 export default DescriptionSection;
 
-// Styled Components with Responsive Typography
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: ${theme.colors.navy};
+  padding: 0 5vh;
+`;
 
 const WelcomeTextContainer = styled.div`
   background-color: ${theme.colors.blue20};
@@ -44,27 +53,30 @@ const WelcomeTextContainer = styled.div`
   p {
     margin: 0;
     color: ${theme.colors.blue};
-    font-size: 12px;        // Small badge — stays fixed
+    font-size: 12px; // Small badge — stays fixed
     font-weight: 600;
     letter-spacing: 0.5px;
   }
 `;
 
-const MainContainer = styled.div`
+const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20vh 20vh;
-  min-height: 80vh;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20vh 24px; 
   gap: 16px;
-  background-color: ${theme.colors.navy};
 
   @media (max-width: 1100px) {
-    padding: 15vh 8vw;
+    padding: 15vh 24px;
   }
 
   @media (max-width: 600px) {
-    padding: 12vh 8vw;
+    padding: 12vh 16px;
     gap: 12px;
     min-height: 60vh;
   }

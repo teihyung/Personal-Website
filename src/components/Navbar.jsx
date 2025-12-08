@@ -58,12 +58,14 @@ const Inner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
+
+  width: 100%;
+  max-width: 1200px;     // 🔥 same as Card + DescriptionSection
   margin: 0 auto;
-  padding: 0 5vw;
+  padding: 0 24px;       // 🔥 consistent side padding
 
   @media (max-width: 1100px) {
-    padding: 0 4vw;
+    // padding: 0 20px;
   }
 `;
 

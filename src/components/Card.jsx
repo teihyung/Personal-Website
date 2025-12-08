@@ -42,7 +42,7 @@ const CardContainer = styled.div`
   border-radius: 20px;
   border: 1px solid ${theme.colors.grey20};
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
