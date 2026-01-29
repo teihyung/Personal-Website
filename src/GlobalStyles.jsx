@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0; /* ← Kills the 8px */
     padding: 0;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Inter", sans-serif;
     background: ${props => props.theme.colors.bg};
     min-height: 100vh;
   }
